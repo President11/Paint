@@ -1,0 +1,29 @@
+﻿<html>
+    <head>
+        <title>ペイントソフト</title>
+        <link rel="stylesheet" type="text/css" href="paint.css"/>
+        <script src="paint.js"></script>
+    </head>
+
+    <body onload="start()" id="v">
+        <canvas class="all_img" id="canvas1" width="800px" height="500px" style="border: 1px solid black"></canvas>
+
+        <p style="position:absolute; top: 1; right: 0">ペンの形</p>
+        <img id="square" src="./pic/canvas1.png" style="position:absolute; top: 51; right: 0px" onclick="Pshape(this.id)">
+        <img id="round" src="./pic/canvas2.png" style="position:absolute; top: 210; right: 0px" onclick="Pshape(this.id)">
+        <img id="butt" src="./pic/canvas3.png" style="position:absolute; top: 360; right: 0px" onclick="Pshape(this.id)">
+        <br>
+        <input type="color" id="color" value="#000000">
+        <button id="pen" onclick="drowing(this.id)">ペン</button>
+        <button id="gruw" onclick="drowing(this.id)">消しゴム</button>
+        <input type="number" id="num" max="100" min="1" value="10">
+        <input type="button" id="btn" value="一つ戻る" onclick="undo()">
+        <input type="button" id="btn2" value="一つ進む" onclick="redo()">
+        <button onclick="layer()">レイヤー追加</button><br>
+        <c>レイヤー</c><input type="number" id="lyr_slc" max = "1" min="1" value="1">
+        <p id="id1">u</p>
+        <p id="id2">r</p>
+        <p id="id3">c</p>
+        
+    </body>
+</html>

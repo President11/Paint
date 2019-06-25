@@ -1,0 +1,15 @@
+body{
+    background-color: lightgreen;
+}
+
+canvas{
+    cursor: crosshair;
+}
+img{
+    border: transparent 1px solid;
+    width: 35%;
+    height: 20%;
+}
+img:hover{
+    border: 1px solid black;
+}
