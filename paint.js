@@ -26,7 +26,6 @@ function start(){
 	document.getElementById("lyr_slc").value = 1;
 	count = 0;
 	count2 = 0;
-	document.getElementById("id3").innerHTML = count;
 	select = 1;
 	lyr_max = 1;
 	n = document.getElementById("v");
@@ -76,7 +75,6 @@ function down(e){
 		cv = document.getElementById(lyr_num);
 		ct = cv.getContext("2d");
 	}
-	document.getElementById("id3").innerHTML = count;
     
 	//座標取得
 	var rect = e.target.getBoundingClientRect();
@@ -171,9 +169,7 @@ function undo(){
 		document.getElementById("lyr_slc").value = lyr_max;
 		n.removeChild(pen_log[count][0]);
 		count--;
-		document.getElementById("id1").innerHTML = pen_log[count][0].id;
 		pen_log[count][0].getContext("2d").putImageData(pen_log[count][1], 0, 0);
-		document.getElementById("id3").innerHTML = count;
 		return;
     }
     //作業していたキャンバスが異なる場合
@@ -200,9 +196,7 @@ function redo(){
 		one = false;
 		layer();
 		one = true;
-		document.getElementById("id2").innerHTML = pen_log[count][0].id;
 		pen_log[count][0].getContext("2d").putImageData(pen_log[count][1], 0, 0);
-		document.getElementById("id3").innerHTML = count;
 		return;
     }
     //作業していたレイヤーが異なる場合
@@ -243,6 +237,5 @@ function layer(){
 	}
 	pen_log[count] = [cv, ct.getImageData(0, 0, cv.width, cv.height), 1];
 
-	document.getElementById("id3").innerHTML = count;
 
 }
